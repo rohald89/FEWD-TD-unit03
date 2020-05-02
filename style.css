@@ -5,18 +5,34 @@
 body{
   margin: 0;
   padding: 0;
+  color: grey;
+  font-family: 'Cairo', sans-serif;
+  color: #07575b;
+  background-color: #c4dfe6;
 }
 
 header {
   width: 100%;
-  padding: 30px;
-  background-color: darkblue;
+  padding: 10px;
+  background-color: #003b46;
   color: white;
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
+h2,
+legend {
+  color: #66a5ad;
+}
+
+legend {
+  padding: 30px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+input::placeholder {
+  text-align: right;
+  color: #66a5ad;
 }
 
 .wrapper {
@@ -26,7 +42,7 @@ header h1 {
 
 .wrapper .container {
   text-align: center;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid #003b46;
   padding: 0 10px;
   margin-bottom: 5px;
 }
@@ -41,8 +57,8 @@ header h1 {
   margin-bottom: 40px;
 }
 
-form {
-  border-top: 3px solid black;
+form, hr {
+  border-top: 3px solid #003b46;
 }
 
 .contact,
@@ -52,49 +68,69 @@ form {
   display: flex;
 }
 
-legend {
-  padding: 30px 0;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-label,
-select,
-option:first-child {
-  color: grey;
-}
-
 .contact input,
-.contact select {
+.contact select,
+textarea {
   padding: 10px;
   width: 100%;
-  margin: 10px 0;
+  margin: 15px 0;
   background-color: #eee;
   border: none;
-  border-radius: 5px;
+  border-radius: .5em;
+  resize: none;
 }
 
-.contain {
-  margin: 10px 0;
+textarea {
+  height: 9em;
 }
 
-.newsletter label{
-  margin: 30px 0;
+input:focus,
+select:focus,
+textarea:focus{
+  outline: 0;
+  box-shadow: ;
+  transform: scale(1.03    );
+  box-shadow: 1px 2px 3px rgba(0, 59, 70, 0.5);
 }
 
+.zipcode {
+  display: flex;
+  flex-direction: column;
+}
+.zipcode input{
+  width: 35%;
+}
 .newsletter label:first-of-type{
   margin-top: 0
 }
 
-textarea {
-  width: 100%;
-  height: 7em;
+.newsletter label {
+  margin: 30px 0 15px;
 }
 
 button {
+  outline: 0;
   width: 100%;
   margin: 20px 0 0;
   padding: 15px;
+  border-radius: .5em;
+  background-color: #003b46;
+  color: white;
+  transition: .2s;
+}
+
+button:hover,
+button:focus {
+  transform: scale(1.04);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+  margin: 10px 10px 0 0 ;
 }
 
 footer {
@@ -103,41 +139,27 @@ footer {
   font-style: italic;
 }
 
-input::placeholder {
-  text-align: right;
-}
-
-option {
-  color: black;
-}
-
-#zipcode {
-  width: 50%;
-  margin-bottom: 20px;
-}
-
-hr {
-  border-top: 3px solid black;
-}
-
 @media (min-width: 768px) {
   .wrapper {
     width: 60%;
     margin: auto;
   }
-  .contact input,
+  .contain label {
+    flex-basis: 25%
+  }
+  .contact input:not([id="zipcode"]),
   .contact select{
     width: 75%;
     align-self: flex-end;
   }
+
   .contact .contain {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-  }
-  .containzip {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    }
+
+  .zipcode {
+    flex-direction: row;
   }
 }
