@@ -78,6 +78,7 @@ textarea {
   border: none;
   border-radius: .5em;
   resize: none;
+  transition: .5s;
 }
 
 textarea {
