@@ -2,15 +2,14 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   color: grey;
-  font-family: 'Cairo', sans-serif;
+  font-family: "Cairo", sans-serif;
   color: #07575b;
   background-color: #c4dfe6;
 }
-
 header {
   width: 100%;
   padding: 10px;
@@ -57,7 +56,8 @@ input::placeholder {
   margin-bottom: 40px;
 }
 
-form, hr {
+form,
+hr {
   border-top: 3px solid #003b46;
 }
 
@@ -76,9 +76,9 @@ textarea {
   margin: 15px 0;
   background-color: #eee;
   border: none;
-  border-radius: .5em;
+  border-radius: 0.5em;
   resize: none;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 textarea {
@@ -87,7 +87,7 @@ textarea {
 
 input:focus,
 select:focus,
-textarea:focus{
+textarea:focus {
   outline: 0;
   transform: scale(1.03);
   box-shadow: 1px 2px 3px rgba(0, 59, 70, 0.5);
@@ -97,11 +97,11 @@ textarea:focus{
   display: flex;
   flex-direction: column;
 }
-.zipcode input{
+.zipcode input {
   width: 35%;
 }
-.newsletter label:first-of-type{
-  margin-top: 0
+.newsletter label:first-of-type {
+  margin-top: 0;
 }
 
 .newsletter label {
@@ -113,10 +113,10 @@ button {
   width: 100%;
   margin: 20px 0 0;
   padding: 15px;
-  border-radius: .5em;
+  border-radius: 0.5em;
   background-color: #003b46;
   color: white;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 button:hover,
@@ -129,8 +129,8 @@ button:active {
 }
 
 input[type="checkbox"],
-input[type="radio"]{
-  margin: 10px 10px 0 0 ;
+input[type="radio"] {
+  margin: 10px 10px 0 0;
 }
 
 footer {
@@ -145,10 +145,10 @@ footer {
     margin: auto;
   }
   .contain label {
-    flex-basis: 25%
+    flex-basis: 25%;
   }
   .contact input:not([id="zipcode"]),
-  .contact select{
+  .contact select {
     width: 75%;
     align-self: flex-end;
   }
@@ -157,7 +157,7 @@ footer {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    }
+  }
 
   .zipcode {
     flex-direction: row;
